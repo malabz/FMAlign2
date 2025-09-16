@@ -124,11 +124,11 @@ wget https://github.com/malabz/HAlign-3/releases/download/v3.0.0-rc1/HAlign-3.0.
 sudo mv HAlign-3.0.0_rc1.jar /usr/local/bin/
 
 # Create a wrapper script
-sudo tee /usr/local/bin/halign3 >/dev/null <<'EOF'
+sudo tee /usr/local/bin/halign >/dev/null <<'EOF'
 #!/usr/bin/env bash
 exec java -jar /usr/local/bin/HAlign-3.0.0_rc1.jar "$@"
 EOF
-sudo chmod +x /usr/local/bin/halign3
+sudo chmod +x /usr/local/bin/halign
 
 # Test
 halign3 -h
@@ -143,17 +143,17 @@ wget -O $HOME/bin/HAlign-3.0.0_rc1.jar \
   https://github.com/malabz/HAlign-3/releases/download/v3.0.0-rc1/HAlign-3.0.0_rc1.jar
 
 # Create a wrapper script
-cat > $HOME/bin/halign3 <<'EOF'
+cat > $HOME/bin/halign <<'EOF'
 #!/usr/bin/env bash
 exec java -jar $HOME/bin/HAlign-3.0.0_rc1.jar "$@"
 EOF
-chmod +x $HOME/bin/halign3
+chmod +x $HOME/bin/halign
 
 # Add $HOME/bin to PATH if not already
 export PATH=$HOME/bin:$PATH
 
 # Test
-halign3 -h
+halign -h
 ```
 
 ---
