@@ -202,7 +202,7 @@ int main(int argc, char** argv) {
         else if (cmd_path == "halign3") {
             cmd_template = "halign -t {thread} -o {output} {input}";
 		} else if(cmd_path == "halign4"){
-            cmd_template = "halign4 {input} {output} -t {thread}";
+            cmd_template = "halign4 -i {input} -o {output} -t {thread}";
             #ifdef _WIN32
             std::cout << "halign4 only supports linux" << std::endl;
             exit(1);
